@@ -131,16 +131,16 @@
 <header class="doc">
   <div class="kicker">Boston Children's Hospital · CMDI</div>
   <h1>iPhone Kitting Instructions</h1>
-  <div class="sub">Step-by-step setup, labeling, SIM, quality check and packing — for CDW Configuration Services</div>
+  <div class="sub">Step-by-step labeling, setup, quality check and packing — for CDW Configuration Services</div>
   <div class="meta">
-    <div><span>Version</span>1.0 — DRAFT</div>
+    <div><span>Version</span>1.1 — DRAFT</div>
     <div><span>Last updated</span>September 11, 2026</div>
     <div><span>Owner</span>BCH CMDI (Clinical Mobile Devices)</div>
-    <div><span>Device OS</span><span class="tbd">TBD: iOS version</span></div>
+    <div><span>Management</span>Apple Business Manager + Omnissa Workspace ONE</div>
   </div>
 </header>
 
-<div class="draft"><b>DRAFT — not yet approved for use.</b> Items highlighted in yellow are open questions BCH must answer before this guide is sent to CDW. Sensitive values (Wi-Fi password, device passcode, ship-to address) are <b>never</b> written on this page — BCH provides them to CDW separately.</div>
+<div class="draft"><b>DRAFT — not yet approved for use.</b> Items highlighted in yellow still need BCH input before this guide is sent to CDW.</div>
 
 <div class="toolbar noprint">
   <button type="button" onclick="window.print()">Print / Save as PDF</button>
@@ -150,31 +150,31 @@
 <!-- ============================ OVERVIEW ============================ -->
 <section class="card">
   <h2>How this works</h2>
-  <p>Every iPhone on this order is already registered to Boston Children's Hospital in <b>Apple Business Manager (ABM)</b>. The first time a phone is powered on and connected to Wi-Fi, it automatically downloads BCH's management profile (MDM) and then installs BCH's apps on its own. Your job is to label each phone, give it cellular service, walk it through setup, set a few settings, open two apps once, check it, and pack it.</p>
+  <p>Every iPhone on this order is already registered to Boston Children's Hospital in <b>Apple Business Manager (ABM)</b>. The first time a phone is powered on and connected to Wi-Fi, it automatically downloads BCH's management profile and then installs BCH's apps and settings on its own. Most setup screens are skipped automatically.</p>
+  <p>Your job: label each phone, walk it through the few remaining setup screens, open a handful of apps and accept their prompts, set a few settings, check it, and pack it.</p>
   <ol class="flow">
     <li><b>Prepare</b><small>Supplies, Wi-Fi, charge</small></li>
-    <li><b>Label</b><small>Serial label on the phone's back</small></li>
-    <li><b>SIM / eSIM</b><small>Cellular service + record numbers</small></li>
-    <li><b>Setup Assistant</b><small>Power on, enroll in BCH management</small></li>
-    <li><b>Hubb app</b><small>Open and allow permissions</small></li>
+    <li><b>Label</b><small>Serial number on the phone's back</small></li>
+    <li><b>Setup</b><small>Power on, enroll in BCH management</small></li>
+    <li><b>Hub app</b><small>Open, accept prompts</small></li>
     <li><b>Apps installed</b><small>Wait until every app finishes</small></li>
-    <li><b>Settings</b><small>AutoFill, Live Activities, 5G, App Store</small></li>
-    <li><b>Rover &amp; Haiku</b><small>Open once, allow prompts</small></li>
+    <li><b>Settings</b><small>Locker, 5G, App Store</small></li>
+    <li><b>Rover &amp; Haiku</b><small>Open once, accept prompts</small></li>
     <li><b>Quality check</b><small>Verify and log each phone</small></li>
     <li><b>Case &amp; pack</b><small>Case on, box, ship</small></li>
   </ol>
-  <p style="margin-top:12px;color:var(--muted);font-size:13.5px">Estimated hands-on time per phone: <span class="tbd">TBD: minutes</span>. Menu names below match iOS <span class="tbd">TBD</span>; they can differ slightly on other versions.</p>
+  <p style="margin-top:12px;color:var(--muted);font-size:13.5px">Menu names can differ slightly between iOS versions.</p>
 </section>
 
 <section class="card">
   <h2>The rules that matter most</h2>
-  <p class="lede">If you remember nothing else, remember these. Breaking one usually means the phone has to be erased and set up again.</p>
+  <p class="lede">Breaking one of these usually means the phone has to be erased and set up again.</p>
   <ol class="rules">
-    <li><b>Never sign in with an Apple Account (Apple ID)</b> — not during setup, not in the App Store, not in Settings.</li>
     <li><b>Never skip Remote Management.</b> If the <i>Remote Management</i> screen does not appear during setup, stop working on that phone and follow <a href="#trouble">Troubleshooting</a>.</li>
-    <li><b>Never sign in to any app</b> (Hubb, Rover, Haiku, Locker, or any other) with any username or password. Only accept or allow the prompts described here.</li>
+    <li><b>Never sign in with an Apple Account (Apple ID)</b> — not in setup, the App Store, or Settings.</li>
+    <li><b>Never sign in to any app</b> with a username or password. Just open the apps listed here and accept their prompts.</li>
     <li><b>Keep phones on Wi-Fi and on power</b> until every app has finished installing.</li>
-    <li><b>Do not install, delete or move apps, and do not change settings</b> that aren't in this guide.</li>
+    <li><b>Do not install, delete or move apps, and do not change settings</b> that aren't in this guide. BCH's management handles everything else.</li>
     <li><b>When something doesn't match this guide, set the phone aside and ask BCH</b> — don't improvise.</li>
   </ol>
 </section>
@@ -184,14 +184,13 @@
   <ul>
     <li><span>0</span><a href="#prep">Before you start</a></li>
     <li><span>1</span><a href="#label">Label the phone</a></li>
-    <li><span>2</span><a href="#sim">SIM / eSIM</a></li>
-    <li><span>3</span><a href="#setup">Power on &amp; Setup Assistant</a></li>
-    <li><span>4</span><a href="#hubb">Hubb app</a></li>
-    <li><span>5</span><a href="#apps">Confirm all apps installed</a></li>
-    <li><span>6</span><a href="#settings">Device settings</a></li>
-    <li><span>7</span><a href="#rover">Rover &amp; Haiku</a></li>
-    <li><span>8</span><a href="#qa">Quality check</a></li>
-    <li><span>9</span><a href="#pack">Case, pack &amp; ship</a></li>
+    <li><span>2</span><a href="#setup">Power on &amp; setup</a></li>
+    <li><span>3</span><a href="#hub">Hub app</a></li>
+    <li><span>4</span><a href="#apps">Confirm all apps installed</a></li>
+    <li><span>5</span><a href="#settings">Device settings</a></li>
+    <li><span>6</span><a href="#rover">Rover &amp; Haiku</a></li>
+    <li><span>7</span><a href="#qa">Quality check</a></li>
+    <li><span>8</span><a href="#pack">Case, pack &amp; ship</a></li>
     <li><span>A</span><a href="#manifest">Device manifest</a></li>
     <li><span>B</span><a href="#trouble">Troubleshooting &amp; when to stop</a></li>
     <li><span>C</span><a href="#contacts">Contacts</a></li>
@@ -206,36 +205,23 @@
     <div>
       <h3>Supplies</h3>
       <ul>
-        <li>iPhones — model <span class="tbd">TBD: model / storage / color</span>, quantity <span class="tbd">TBD</span></li>
-        <li>Labels + printer — <span class="tbd">TBD: label size / stock</span> (see <a href="#label">Step 1</a>)</li>
-        <li>SIM cards or eSIM activation info (see <a href="#sim">Step 2</a>) and a SIM eject tool if physical SIMs are used</li>
-        <li>Cases — <span class="tbd">TBD: case make/model</span></li>
-        <li>Screen protectors — <span class="tbd">TBD: yes/no, model</span></li>
-        <li>Charging cables — <span class="tbd">TBD: type (USB-C to USB-C?) and qty</span>; power adapters <span class="tbd">TBD: included?</span></li>
+        <li>The iPhones, cases and charging cables on this order</li>
+        <li>Label printer and labels for the serial number</li>
         <li>Isopropyl alcohol wipes (to clean the phone back before labeling)</li>
+        <li>Shipping boxes and padding</li>
         <li>The device manifest spreadsheet (see <a href="#manifest">Manifest</a>)</li>
       </ul>
     </div>
     <div>
-      <h3>From BCH (sent to you separately)</h3>
+      <h3>Wi-Fi</h3>
       <ul>
-        <li>Wi-Fi network name and password</li>
-        <li>Device passcode, if one is required (<span class="tbd">TBD: is one required?</span>)</li>
-        <li>SIM assignment sheet / eSIM activation details</li>
-        <li>Ship-to address and receiving contact</li>
-        <li>Blank manifest template</li>
-      </ul>
-      <h3>Wi-Fi requirements</h3>
-      <ul>
-        <li>Internet access with <b>no sign-in / splash page</b> (captive portal) — enrollment fails behind one.</li>
-        <li>Apple services not blocked: TCP 80, 443, 5223 and 2197 to Apple's network (17.0.0.0/8).</li>
-        <li>Enough bandwidth for many phones downloading apps at once (about <span class="tbd">TBD</span> GB per phone).</li>
+        <li><b>Any Wi-Fi network with internet access</b> works. Once enrolled, BCH's management takes over the phone's Wi-Fi settings.</li>
+        <li>Avoid networks with a <b>sign-in / splash page</b> (guest Wi-Fi at hotels, etc.) — enrollment can fail behind one.</li>
       </ul>
     </div>
   </div>
   <h3>Get ready</h3>
   <ol class="steps">
-    <li><input type="checkbox" aria-label="done"><div>Confirm the serial numbers on the boxes match the order list from BCH. Report any serial that isn't on the list <b>before</b> powering it on — it may not be registered to BCH.</div></li>
     <li><input type="checkbox" aria-label="done"><div>Charge phones to at least <b>50%</b> before starting, and keep them on power during setup.</div></li>
     <li><input type="checkbox" aria-label="done"><div>Open the manifest and fill in one row per phone as you go.</div></li>
   </ol>
@@ -246,54 +232,21 @@
   <h2><span class="num">1</span>Label the phone</h2>
   <p class="lede">The serial number label goes on the <b>back of the iPhone itself — not on the case.</b></p>
   <ol class="steps">
-    <li><input type="checkbox" aria-label="done"><div>Print the label. It must show:
-      <ul>
-        <li>The iPhone serial number as a <b>Code 128 barcode</b> <span class="tbd">TBD: confirm barcode type</span> and as readable text</li>
-        <li><span class="tbd">TBD: anything else? (asset tag, "Property of Boston Children's Hospital", phone number, IMEI)</span></li>
-      </ul>
-      Label size: <span class="tbd">TBD</span>. The serial number is printed on the iPhone box.</div></li>
+    <li><input type="checkbox" aria-label="done"><div>Print a label with the iPhone's <b>serial number</b>. The serial number is printed on the iPhone's retail box — keep the box until the label is on.</div></li>
     <li><input type="checkbox" aria-label="done"><div>Wipe the back of the phone with an alcohol wipe and let it dry.</div></li>
-    <li><input type="checkbox" aria-label="done"><div>Apply the label: <span class="tbd">TBD: exact spot — suggested: lower third of the back, centered, horizontal</span>.
+    <li><input type="checkbox" aria-label="done"><div>Apply the label to the back of the phone.
       <ul>
         <li>Do <b>not</b> cover the cameras, flash, or microphone.</li>
-        <li>Keep it flat, straight, with no bubbles or lifted corners. Press firmly for a few seconds.</li>
+        <li>Keep it flat and straight, with no bubbles or lifted corners. Press firmly for a few seconds.</li>
       </ul></div></li>
-    <li><input type="checkbox" aria-label="done"><div>Make sure you labeled the right phone: after setup, the serial in <span class="path"><b>Settings</b><i>›</i><b>General</b><i>›</i><b>About</b></span> must match the label (checked again in <a href="#qa">Quality check</a>).</div></li>
+    <li><input type="checkbox" aria-label="done"><div>After setup, the serial in <span class="path"><b>Settings</b><i>›</i><b>General</b><i>›</i><b>About</b></span> must match the label — this is checked in <a href="#qa">Quality check</a>.</div></li>
   </ol>
 </section>
 
-<!-- ============================ SIM ============================ -->
-<section class="card" id="sim">
-  <h2><span class="num">2</span>SIM / eSIM</h2>
-  <div class="callout note"><b>Read first</b>
-    <p>iPhone 14 and newer models sold in the US have <b>no physical SIM tray — they are eSIM only.</b> Use Option A or B below based on what BCH confirms: <span class="tbd">TBD: physical SIM or eSIM? Carrier?</span></p>
-  </div>
-  <div class="two">
-    <div>
-      <h3>Option A — Physical SIM card</h3>
-      <ol class="steps">
-        <li><input type="checkbox" aria-label="done"><div>With the phone <b>powered off</b>, eject the SIM tray with the eject tool.</div></li>
-        <li><input type="checkbox" aria-label="done"><div>Insert the SIM card assigned to this phone: <span class="tbd">TBD: any SIM in any phone, or a specific SIM per serial?</span></div></li>
-        <li><input type="checkbox" aria-label="done"><div>Close the tray fully.</div></li>
-        <li><input type="checkbox" aria-label="done"><div>Record the SIM's <b>ICCID</b> (printed on the SIM card carrier) against the phone's serial in the manifest.</div></li>
-      </ol>
-    </div>
-    <div>
-      <h3>Option B — eSIM</h3>
-      <ol class="steps">
-        <li><input type="checkbox" aria-label="done"><div>Activation method: <span class="tbd">TBD: carrier pre-assigns eSIM to each IMEI/EID (activates on its own during setup) OR a QR code per phone</span></div></li>
-        <li><input type="checkbox" aria-label="done"><div>During setup, if a <i>Cellular Setup</i> or <i>Carrier eSIM Available</i> screen appears, tap <span class="btn-label">Continue</span> / <span class="btn-label">Activate</span>. If using QR codes, scan the code assigned to this phone.</div></li>
-        <li><input type="checkbox" aria-label="done"><div>Record the phone's <b>EID</b> and <b>IMEI</b> (<span class="path"><b>Settings</b><i>›</i><b>General</b><i>›</i><b>About</b></span>) in the manifest.</div></li>
-      </ol>
-    </div>
-  </div>
-  <p style="margin-top:10px">In both cases, record the <b>phone number</b> once service is active (<span class="path"><b>Settings</b><i>›</i><b>Cellular</b></span> → <i>My Number</i>) — checked in <a href="#qa">Quality check</a>.</p>
-</section>
-
 <!-- ============================ SETUP ============================ -->
-<section class="card pagebreak" id="setup">
-  <h2><span class="num">3</span>Power on &amp; Setup Assistant</h2>
-  <p class="lede">Press and hold the side button until the Apple logo appears. Go through the screens below. <b>Some screens may be skipped automatically</b> by BCH's configuration — that's normal. The order can vary slightly.</p>
+<section class="card" id="setup">
+  <h2><span class="num">2</span>Power on &amp; setup</h2>
+  <p class="lede">Press and hold the side button until the Apple logo appears. BCH's configuration skips most setup screens automatically, so you should only see the ones below.</p>
   <div class="tablewrap">
   <table>
     <thead><tr><th>Screen</th><th>What to do</th></tr></thead>
@@ -301,87 +254,66 @@
       <tr><td>Hello</td><td>Swipe up from the bottom of the screen.</td></tr>
       <tr><td>Language</td><td>Select <b>English</b>.</td></tr>
       <tr><td>Country or Region</td><td>Select <b>United States</b>.</td></tr>
-      <tr><td>Quick Start</td><td>Tap <span class="btn-label">Set Up Without Another Device</span>.</td></tr>
-      <tr><td>Languages / Accessibility / Appearance</td><td>Leave the defaults and tap <span class="btn-label">Continue</span>.</td></tr>
-      <tr><td>Choose a Wi-Fi Network</td><td>Select the Wi-Fi network BCH gave you and enter the password.</td></tr>
-      <tr><td>Activating iPhone / Cellular Setup</td><td>Wait. If an eSIM screen appears, see <a href="#sim">Step 2, Option B</a>.</td></tr>
-      <tr><td>Data &amp; Privacy</td><td>Tap <span class="btn-label">Continue</span>.</td></tr>
-      <tr class="crit"><td>Remote Management</td><td><b>Required.</b> Confirm the screen names <b>Boston Children's Hospital</b> <span class="tbd">TBD: confirm the exact organization name shown</span>, then tap <span class="btn-label">Enroll This iPhone</span> (may say <span class="btn-label">Continue</span>). Wait for it to finish.<br><b style="color:var(--stop)">If this screen never appears, stop — see <a href="#trouble">Troubleshooting</a>.</b></td></tr>
-      <tr><td>Create a Passcode</td><td><span class="tbd">TBD: use the passcode BCH provided, OR tap Passcode Options → Don't Use Passcode</span></td></tr>
-      <tr><td>Face ID</td><td>Tap <span class="btn-label">Set Up Later</span>.</td></tr>
-      <tr><td>Transfer Your Apps &amp; Data</td><td>Tap <span class="btn-label">Don't Transfer Anything</span> / <span class="btn-label">Set Up as New</span>.</td></tr>
-      <tr class="crit"><td>Apple Account</td><td><b>Do not sign in.</b> Tap <i>Forgot password or don't have an Apple Account?</i> → <span class="btn-label">Set Up Later in Settings</span> → <span class="btn-label">Don't Use</span>.</td></tr>
+      <tr><td>Choose a Wi-Fi Network</td><td>Select any Wi-Fi network with internet access and enter its password.</td></tr>
+      <tr class="crit"><td>Remote Management</td><td><b>Required.</b> The screen says the iPhone will be configured by <b>Boston Children's Hospital</b>. Tap <span class="btn-label">Enroll This iPhone</span> (may say <span class="btn-label">Continue</span>) and wait for it to finish.<br><b style="color:var(--stop)">If this screen never appears, stop — see <a href="#trouble">Troubleshooting</a>.</b></td></tr>
       <tr><td>Location Services</td><td>Tap <span class="btn-label">Enable Location Services</span>.</td></tr>
-      <tr><td>Update iPhone Automatically</td><td><span class="tbd">TBD: Continue (automatic updates on) OR Only Download / Don't install</span></td></tr>
-      <tr><td>Siri</td><td>Tap <span class="btn-label">Set Up Later</span>.</td></tr>
-      <tr><td>Screen Time</td><td>Tap <span class="btn-label">Set Up Later</span>.</td></tr>
-      <tr><td>iPhone Analytics / App Analytics</td><td>Tap <span class="btn-label">Don't Share</span>.</td></tr>
-      <tr><td>Display, True Tone, Action Button, Camera Control, Emergency SOS</td><td>Leave the defaults and tap <span class="btn-label">Continue</span>.</td></tr>
-      <tr><td>Welcome to iPhone</td><td>Swipe up to reach the Home Screen.</td></tr>
-      <tr><td>Any screen not listed</td><td>Accept the default and tap <span class="btn-label">Continue</span> — <b>unless</b> it asks you to sign in, share data, or skip Remote Management. For those, choose <i>Not Now / Set Up Later / Don't Share</i>.</td></tr>
+      <tr><td>Any other screen</td><td>Accept the default and tap <span class="btn-label">Continue</span> — <b>unless</b> it asks you to sign in or create a passcode. For those, choose <i>Set Up Later / Not Now</i>, and let BCH know which screen appeared.</td></tr>
     </tbody>
   </table>
   </div>
   <p><span class="expect">The Home Screen appears and BCH's apps start installing on their own (gray icons that say <i>Waiting…</i> or <i>Loading…</i>).</span></p>
 </section>
 
-<!-- ============================ HUBB ============================ -->
-<section class="card" id="hubb">
-  <h2><span class="num">4</span>Hubb app</h2>
-  <p class="lede">Wait until the Hubb icon finishes installing (no gray icon or progress ring), then:</p>
+<!-- ============================ HUB ============================ -->
+<section class="card" id="hub">
+  <h2><span class="num">3</span>Hub app (Omnissa Intelligent Hub)</h2>
+  <p class="lede">Wait until the <b>Hub</b> icon finishes installing (no gray icon or progress ring), then:</p>
   <ol class="steps">
-    <li><input type="checkbox" aria-label="done"><div>Tap <b>Hubb</b> to open it. <span class="tbd">TBD: does Hubb ask for a login, site code or QR code? If so, what should CDW do?</span></div></li>
+    <li><input type="checkbox" aria-label="done"><div>Tap <b>Hub</b> to open it.</div></li>
     <li><input type="checkbox" aria-label="done"><div><b>Data &amp; Privacy:</b> tap <span class="btn-label">Accept</span>.</div></li>
     <li><input type="checkbox" aria-label="done"><div><b>Location:</b> iOS first offers only <i>Allow Once / Allow While Using App / Don't Allow</i>. Tap <span class="btn-label">Allow While Using App</span>. When a second prompt offers <span class="btn-label">Change to Always Allow</span>, tap it.</div></li>
-    <li><input type="checkbox" aria-label="done"><div>For <b>every other pop-up</b> (Notifications, Bluetooth, Motion &amp; Fitness, Local Network, etc.) tap <span class="btn-label">Allow</span> / <span class="btn-label">Yes</span> / <span class="btn-label">Always Allow</span>.</div></li>
+    <li><input type="checkbox" aria-label="done"><div>For <b>every other pop-up</b> (Notifications, Bluetooth, etc.) tap <span class="btn-label">Allow</span> / <span class="btn-label">Yes</span> / <span class="btn-label">Always Allow</span>.</div></li>
     <li><input type="checkbox" aria-label="done"><div>Go through the remaining in-app screens and tap <span class="btn-label">I Understand</span> on each.</div></li>
-    <li><input type="checkbox" aria-label="done"><div>Double-check location: <span class="path"><b>Settings</b><i>›</i><b>Apps</b><i>›</i><b>Hubb</b><i>›</i><b>Location</b></span> must be <b>Always</b>, and <b>Precise Location</b> must be <b>on</b>. Fix it here if the in-app prompt was missed.
-      <span class="expect">Hubb location = Always, Precise Location on.</span></div></li>
+    <li><input type="checkbox" aria-label="done"><div>Double-check location: <span class="path"><b>Settings</b><i>›</i><b>Apps</b><i>›</i><b>Hub</b><i>›</i><b>Location</b></span> must be <b>Always</b>, and <b>Precise Location</b> must be <b>on</b>. Fix it here if the in-app prompt was missed.
+      <span class="expect">Hub location = Always, Precise Location on.</span></div></li>
   </ol>
 </section>
 
 <!-- ============================ APPS ============================ -->
 <section class="card" id="apps">
-  <h2><span class="num">5</span>Confirm all apps are installed</h2>
+  <h2><span class="num">4</span>Confirm all apps are installed</h2>
   <p class="lede">Keep the phone on Wi-Fi and power. Apps install on their own — you do not need the App Store.</p>
   <ol class="steps">
-    <li><input type="checkbox" aria-label="done"><div>Check that every app on this list is on the phone: <span class="tbd">TBD: full list — e.g. Hubb, Rover, Haiku, Locker, CMDI GCT, …</span></div></li>
-    <li><input type="checkbox" aria-label="done"><div>No icon is gray, shows a progress ring, or says <i>Waiting…</i> / <i>Loading…</i>.</div></li>
-    <li><input type="checkbox" aria-label="done"><div>If apps are still waiting after <b>30 minutes</b> <span class="tbd">TBD: confirm time</span>, see <a href="#trouble">Troubleshooting</a>.</div></li>
+    <li><input type="checkbox" aria-label="done"><div>Wait until no icon on the Home Screen is gray, shows a progress ring, or says <i>Waiting…</i> / <i>Loading…</i>.
+      <span class="expect">Every app icon is in full color and opens.</span></div></li>
   </ol>
 </section>
 
 <!-- ============================ SETTINGS ============================ -->
 <section class="card pagebreak" id="settings">
-  <h2><span class="num">6</span>Device settings</h2>
+  <h2><span class="num">5</span>Device settings</h2>
   <div class="callout tip"><b>Shortcut: the CMDI GCT app</b>
-    <p>The <b>CMDI GCT</b> app (installed with the other BCH apps) walks you through these settings screen by screen. Open it and follow its prompts, then use the list below to confirm nothing was missed. <span class="tbd">TBD: confirm GCT installs automatically; which steps it covers; add a screenshot</span></p>
+    <p>If the <b>CMDI GCT</b> app is on the phone, open it — it walks you through these settings screen by screen. Then use the list below to confirm nothing was missed.</p>
   </div>
 
-  <h3>6.1 &nbsp;AutoFill — use Locker</h3>
+  <h3>5.1 &nbsp;Locker</h3>
   <ol class="steps">
-    <li><input type="checkbox" aria-label="done"><div>Go to <span class="path"><b>Settings</b><i>›</i><b>General</b><i>›</i><b>AutoFill &amp; Passwords</b></span>.</div></li>
-    <li><input type="checkbox" aria-label="done"><div>Turn on <b>AutoFill Passwords and Passkeys</b>.</div></li>
-    <li><input type="checkbox" aria-label="done"><div>Under <i>AutoFill From</i>, turn <b>Locker</b> on. <span class="tbd">TBD: should Passwords (Apple / iCloud Keychain) be turned OFF so Locker is the only option?</span>
-      <span class="expect">Locker shows a checkmark / is toggled on.</span></div></li>
-  </ol>
-
-  <h3>6.2 &nbsp;Locker — Live Activities</h3>
-  <ol class="steps">
-    <li><input type="checkbox" aria-label="done"><div>Go to <span class="path"><b>Settings</b><i>›</i><b>Apps</b><i>›</i><b>Locker</b><i>›</i><b>Live Activities</b></span>.</div></li>
-    <li><input type="checkbox" aria-label="done"><div>Turn <b>Live Activities</b> on. If <i>More Frequent Updates</i> appears, turn it on too. <span class="tbd">TBD: confirm both should be ON</span>
+    <li><input type="checkbox" aria-label="done"><div>Open <b>Locker</b> and tap <span class="btn-label">Allow</span> / <span class="btn-label">Accept</span> on every prompt. Do not sign in.</div></li>
+    <li><input type="checkbox" aria-label="done"><div>Go to <span class="path"><b>Settings</b><i>›</i><b>General</b><i>›</i><b>AutoFill &amp; Passwords</b></span> and turn <b>Locker</b> on.
+      <span class="expect">Locker is toggled on.</span></div></li>
+    <li><input type="checkbox" aria-label="done"><div>Go to <span class="path"><b>Settings</b><i>›</i><b>Apps</b><i>›</i><b>Locker</b><i>›</i><b>Live Activities</b></span> and turn <b>Live Activities</b> on.
       <span class="expect">Live Activities toggle is green.</span></div></li>
   </ol>
 
-  <h3>6.3 &nbsp;Cellular — 5G data mode</h3>
+  <h3>5.2 &nbsp;Cellular — 5G data mode</h3>
   <ol class="steps">
     <li><input type="checkbox" aria-label="done"><div>Go to <span class="path"><b>Settings</b><i>›</i><b>Cellular</b><i>›</i><b>Cellular Data Options</b><i>›</i><b>Data Mode</b></span>.</div></li>
     <li><input type="checkbox" aria-label="done"><div>Select <b>Allow More Data on 5G</b>.
       <span class="expect">Checkmark next to "Allow More Data on 5G".</span>
-      <small style="display:block;color:var(--muted)">This option only appears once cellular service is active. If it's missing, check the SIM/eSIM (<a href="#trouble">Troubleshooting</a>).</small></div></li>
+      <small style="display:block;color:var(--muted)">If this option isn't shown, note it in the manifest and continue.</small></div></li>
   </ol>
 
-  <h3>6.4 &nbsp;App Store — automatic downloads</h3>
+  <h3>5.3 &nbsp;App Store — automatic downloads</h3>
   <ol class="steps">
     <li><input type="checkbox" aria-label="done"><div>Go to <span class="path"><b>Settings</b><i>›</i><b>Apps</b><i>›</i><b>App Store</b></span>.</div></li>
     <li><input type="checkbox" aria-label="done"><div>Under <i>Automatic Downloads</i>: turn <b>App Downloads</b> on and <b>App Updates</b> on.</div></li>
@@ -392,14 +324,14 @@
 
 <!-- ============================ ROVER / HAIKU ============================ -->
 <section class="card" id="rover">
-  <h2><span class="num">7</span>Rover &amp; Haiku — first launch</h2>
-  <p class="lede">Each app only needs to be opened once so its permission prompts are answered. <b>Do not sign in.</b></p>
+  <h2><span class="num">6</span>Rover &amp; Haiku — first launch</h2>
+  <p class="lede">Each app only needs to be opened once so its prompts are answered. <b>Do not sign in.</b></p>
   <div class="two">
     <div>
       <h3>Rover</h3>
       <ol class="steps">
         <li><input type="checkbox" aria-label="done"><div>Open <b>Rover</b>.</div></li>
-        <li><input type="checkbox" aria-label="done"><div>Tap <span class="btn-label">Accept</span> / <span class="btn-label">Allow</span> on every prompt (notifications, camera, microphone, Bluetooth, local network, etc.).</div></li>
+        <li><input type="checkbox" aria-label="done"><div>Tap <span class="btn-label">Accept</span> / <span class="btn-label">Allow</span> on every prompt.</div></li>
         <li><input type="checkbox" aria-label="done"><div>Stop at the sign-in screen. Swipe up to close the app.</div></li>
       </ol>
     </div>
@@ -412,30 +344,26 @@
       </ol>
     </div>
   </div>
-  <p><span class="tbd">TBD: if Rover or Haiku ask for a server / environment / organization code, what should CDW enter?</span></p>
 </section>
 
 <!-- ============================ QA ============================ -->
 <section class="card pagebreak" id="qa">
-  <h2><span class="num">8</span>Quality check — every phone</h2>
-  <p class="lede">Do this for each phone before it goes in a case. Record the result in the manifest. A phone that fails any check does not ship — set it aside and report it.</p>
+  <h2><span class="num">7</span>Quality check — every phone</h2>
+  <p class="lede">Do this for each phone before it goes in a case, and record the result in the manifest. A phone that fails any check does not ship — set it aside and report it.</p>
   <div class="tablewrap">
   <table class="plain">
     <thead><tr><th>Check</th><th>Where</th><th>Pass when</th></tr></thead>
     <tbody>
       <tr><td>Label matches phone</td><td><span class="path"><b>Settings</b><i>›</i><b>General</b><i>›</i><b>About</b></span></td><td>Serial Number on screen = serial on the label</td></tr>
-      <tr><td>Managed by BCH</td><td><span class="path"><b>Settings</b><i>›</i><b>General</b><i>›</i><b>VPN &amp; Device Management</b></span></td><td>A Boston Children's Hospital management profile is listed <span class="tbd">TBD: exact profile name</span></td></tr>
-      <tr><td>All apps installed</td><td>Home Screen</td><td>Every app on the list is present; none waiting or gray</td></tr>
-      <tr><td>Cellular service</td><td>Status bar; <span class="path"><b>Settings</b><i>›</i><b>Cellular</b></span></td><td>Carrier name and signal bars show; phone number recorded <span class="tbd">TBD: test call or text required?</span></td></tr>
-      <tr><td>Hubb location</td><td><span class="path"><b>Settings</b><i>›</i><b>Apps</b><i>›</i><b>Hubb</b><i>›</i><b>Location</b></span></td><td>Always, Precise Location on</td></tr>
-      <tr><td>AutoFill</td><td><span class="path"><b>Settings</b><i>›</i><b>General</b><i>›</i><b>AutoFill &amp; Passwords</b></span></td><td>Locker on</td></tr>
-      <tr><td>Live Activities</td><td><span class="path"><b>Settings</b><i>›</i><b>Apps</b><i>›</i><b>Locker</b></span></td><td>Live Activities on</td></tr>
+      <tr><td>Managed by BCH</td><td><span class="path"><b>Settings</b><i>›</i><b>General</b><i>›</i><b>VPN &amp; Device Management</b></span></td><td>A Boston Children's Hospital management profile is listed</td></tr>
+      <tr><td>All apps installed</td><td>Home Screen</td><td>No app is gray or waiting</td></tr>
+      <tr><td>Hub location</td><td><span class="path"><b>Settings</b><i>›</i><b>Apps</b><i>›</i><b>Hub</b><i>›</i><b>Location</b></span></td><td>Always, Precise Location on</td></tr>
+      <tr><td>Locker AutoFill</td><td><span class="path"><b>Settings</b><i>›</i><b>General</b><i>›</i><b>AutoFill &amp; Passwords</b></span></td><td>Locker on</td></tr>
+      <tr><td>Locker Live Activities</td><td><span class="path"><b>Settings</b><i>›</i><b>Apps</b><i>›</i><b>Locker</b></span></td><td>Live Activities on</td></tr>
       <tr><td>5G data mode</td><td><span class="path"><b>Settings</b><i>›</i><b>Cellular</b><i>›</i><b>Cellular Data Options</b></span></td><td>Allow More Data on 5G</td></tr>
       <tr><td>App Store downloads</td><td><span class="path"><b>Settings</b><i>›</i><b>Apps</b><i>›</i><b>App Store</b></span></td><td>Automatic Downloads on; Cellular App Downloads = Always Allow</td></tr>
-      <tr><td>Rover &amp; Haiku</td><td>Open each app</td><td>Opens straight to the sign-in screen, no permission pop-ups</td></tr>
-      <tr><td>No Apple Account</td><td><span class="path"><b>Settings</b></span> (top of screen)</td><td>Shows "Sign in to your iPhone" — nobody is signed in</td></tr>
+      <tr><td>Hub, Locker, Rover, Haiku</td><td>Open each app</td><td>Opens with no permission pop-ups left to answer</td></tr>
       <tr><td>Physical condition</td><td>Look at the phone</td><td>No scratches, cracks or dead pixels; buttons and cameras work</td></tr>
-      <tr><td>Battery</td><td>Status bar</td><td>At least <span class="tbd">TBD</span>%</td></tr>
     </tbody>
   </table>
   </div>
@@ -443,44 +371,38 @@
 
 <!-- ============================ PACK ============================ -->
 <section class="card" id="pack">
-  <h2><span class="num">9</span>Case, pack &amp; ship</h2>
+  <h2><span class="num">8</span>Case, pack &amp; ship</h2>
   <h3>Case</h3>
   <ol class="steps">
-    <li><input type="checkbox" aria-label="done"><div>Apply screen protector: <span class="tbd">TBD: yes/no</span></div></li>
     <li><input type="checkbox" aria-label="done"><div>Put the phone in its case. Make sure the label is flat and not wrinkled under the case.</div></li>
     <li><input type="checkbox" aria-label="done"><div>Power state for shipping: <span class="tbd">TBD: power OFF, or leave ON</span></div></li>
   </ol>
   <h3>Pack</h3>
   <ol class="steps">
-    <li><input type="checkbox" aria-label="done"><div>Retail boxes: <span class="tbd">TBD: ship phones in their original Apple boxes, or discard/recycle boxes and bulk-pack?</span></div></li>
+    <li><input type="checkbox" aria-label="done"><div>Take the <b>USB-C charging cable</b> out of each retail box and keep it. Then <b>discard the retail packaging</b> (boxes, inserts, paperwork) — phones do not ship in their Apple boxes.</div></li>
     <li><input type="checkbox" aria-label="done"><div>Pack phones into <b>as few boxes as possible</b>, padded so they can't shift or rub screen-to-screen.</div></li>
-    <li><input type="checkbox" aria-label="done"><div>Pack <b>all charging cables in a separate box</b> <span class="tbd">TBD: power adapters too?</span>. Label it <b>CHARGING CABLES — QTY ___</b>.</div></li>
+    <li><input type="checkbox" aria-label="done"><div>Pack <b>all charging cables in a separate box</b>. Label it <b>CHARGING CABLES — QTY ___</b>.</div></li>
     <li><input type="checkbox" aria-label="done"><div>Number every box (<b>Box 1 of N</b>) and write the phone count on the outside.</div></li>
     <li><input type="checkbox" aria-label="done"><div>Put a <b>packing list</b> inside each box listing the serial numbers in that box. Enter the box number for each phone in the manifest.</div></li>
-    <li><input type="checkbox" aria-label="done"><div>Email the completed manifest to BCH <b>before</b> the shipment leaves (see <a href="#contacts">Contacts</a>).</div></li>
-    <li><input type="checkbox" aria-label="done"><div>Ship to the address BCH provided. Send the tracking number(s) to BCH.</div></li>
+    <li><input type="checkbox" aria-label="done"><div>Email the completed manifest to BCH <b>before</b> the shipment leaves (see <a href="#contacts">Contacts</a>), then send the tracking number(s).</div></li>
   </ol>
 </section>
 
 <!-- ============================ MANIFEST ============================ -->
 <section class="card" id="manifest">
   <h2><span class="num">A</span>Device manifest</h2>
-  <p class="lede">One row per phone, as an Excel or CSV file. BCH uses this to match every phone to its SIM, phone number and box.</p>
+  <p class="lede">One row per phone, as an Excel or CSV file. BCH uses this to confirm every phone was set up and to find it by box.</p>
   <div class="tablewrap">
   <table class="plain">
-    <thead><tr><th>Column</th><th>Example / notes</th></tr></thead>
+    <thead><tr><th>Column</th><th>Where to find it / notes</th></tr></thead>
     <tbody>
-      <tr><td>Serial Number</td><td>From Settings › General › About</td></tr>
+      <tr><td>Serial Number</td><td>Settings › General › About</td></tr>
       <tr><td>IMEI</td><td>Settings › General › About</td></tr>
-      <tr><td>EID (eSIM) or ICCID (SIM card)</td><td>Whichever applies</td></tr>
-      <tr><td>Phone Number</td><td>Settings › Cellular › My Number</td></tr>
-      <tr><td>Carrier</td><td></td></tr>
-      <tr><td>iOS Version</td><td>Settings › General › About</td></tr>
       <tr><td>Enrolled in BCH management (Y/N)</td><td>From Quality check</td></tr>
       <tr><td>All QA checks passed (Y/N)</td><td>If N, explain in Notes</td></tr>
       <tr><td>Box Number</td><td>e.g. 3 of 12</td></tr>
       <tr><td>Technician initials &amp; date</td><td></td></tr>
-      <tr><td>Notes</td><td>Damage, exceptions, anything unusual</td></tr>
+      <tr><td>Notes</td><td>Damage, missing 5G option, anything unusual</td></tr>
     </tbody>
   </table>
   </div>
@@ -492,7 +414,7 @@
   <div class="callout stop"><b>Stop and set the phone aside when…</b>
     <ul>
       <li>The Remote Management screen never appeared, or someone signed in with an Apple Account.</li>
-      <li>The phone is damaged, won't power on, or has a serial not on BCH's order list.</li>
+      <li>The phone is damaged or won't power on.</li>
       <li>The same problem repeats after following the fix below once.</li>
     </ul>
     <p>Record the serial number and the problem in the manifest Notes column and report it to BCH. Do not ship it.</p>
@@ -501,15 +423,13 @@
   <table class="plain">
     <thead><tr><th>Problem</th><th>What to do</th></tr></thead>
     <tbody>
-      <tr><td><b>No Remote Management screen</b> — setup went straight to the Home Screen</td><td>The phone did not reach BCH's management. Erase it: <span class="path"><b>Settings</b><i>›</i><b>General</b><i>›</i><b>Transfer or Reset iPhone</b><i>›</i><b>Erase All Content and Settings</b></span>, then restart setup on a Wi-Fi network that meets the <a href="#prep">requirements</a>. If it happens again, stop and report the serial — it may not be assigned in ABM.</td></tr>
+      <tr><td><b>No Remote Management screen</b> — setup went straight to the Home Screen</td><td>The phone did not reach BCH's management. Erase it: <span class="path"><b>Settings</b><i>›</i><b>General</b><i>›</i><b>Transfer or Reset iPhone</b><i>›</i><b>Erase All Content and Settings</b></span>, then set it up again on a different Wi-Fi network. If it happens again, stop and report the serial.</td></tr>
       <tr><td><b>"Unable to connect to the configuration server"</b> or enrollment error</td><td>Check the Wi-Fi has internet and no sign-in page. Tap Try Again. If it fails twice, power off and report.</td></tr>
-      <tr><td><b>Apps stuck on Waiting… / Loading…</b></td><td>Confirm Wi-Fi is connected. Restart the phone (hold side + volume button, slide to power off, power on). Wait 15 more minutes. Still stuck: report the serial and app names.</td></tr>
-      <tr><td><b>An expected app never appears</b></td><td>Wait 30 minutes on Wi-Fi, restart once. Still missing: report — don't install it from the App Store.</td></tr>
-      <tr><td><b>No service / "No SIM" / SOS only</b></td><td>Physical SIM: power off, reseat the SIM. eSIM: check <span class="path"><b>Settings</b><i>›</i><b>Cellular</b></span> for a pending eSIM to activate. Still no service: record ICCID/EID and report.</td></tr>
-      <tr><td><b>"Allow More Data on 5G" is missing</b></td><td>Cellular service isn't active yet, or no 5G coverage at your site. Note it in the manifest; BCH will decide whether to ship.</td></tr>
-      <tr><td><b>Hubb location isn't "Always"</b></td><td><span class="path"><b>Settings</b><i>›</i><b>Apps</b><i>›</i><b>Hubb</b><i>›</i><b>Location</b></span> → Always; turn on Precise Location.</td></tr>
+      <tr><td><b>Apps stuck on Waiting… / Loading…</b></td><td>Confirm Wi-Fi is connected. Restart the phone and wait 15 more minutes. Still stuck: report the serial and app names. Don't install apps from the App Store.</td></tr>
+      <tr><td><b>Hub location isn't "Always"</b></td><td><span class="path"><b>Settings</b><i>›</i><b>Apps</b><i>›</i><b>Hub</b><i>›</i><b>Location</b></span> → Always; turn on Precise Location.</td></tr>
       <tr><td><b>Accidentally tapped "Don't Allow"</b> in an app</td><td>Open <span class="path"><b>Settings</b><i>›</i><b>Apps</b><i>›</i><b>(app name)</b></span> and turn the permission back on.</td></tr>
-      <tr><td><b>Signed in with an Apple Account by mistake</b></td><td>Stop. Erase the phone (see first row) and set it up again from Step 3. Tell BCH.</td></tr>
+      <tr><td><b>A sign-in or passcode screen appeared</b></td><td>Choose <i>Set Up Later / Not Now</i>. Note the screen name in the manifest so BCH can adjust its configuration.</td></tr>
+      <tr><td><b>Signed in with an Apple Account by mistake</b></td><td>Stop. Erase the phone (see first row) and set it up again from Step 2. Tell BCH.</td></tr>
     </tbody>
   </table>
   </div>
@@ -524,12 +444,11 @@
     <tbody>
       <tr><td>Setup questions / problem phones</td><td><span class="tbd">TBD: name, email, phone — BCH CMDI</span></td></tr>
       <tr><td>Manifest &amp; tracking numbers</td><td><span class="tbd">TBD: email</span></td></tr>
-      <tr><td>Carrier / SIM activation issues</td><td><span class="tbd">TBD: carrier account contact</span></td></tr>
       <tr><td>Order / logistics (CDW side)</td><td><span class="tbd">TBD: CDW project manager</span></td></tr>
     </tbody>
   </table>
   </div>
-  <p style="margin-top:10px;color:var(--muted);font-size:13.5px">Expected response time for questions: <span class="tbd">TBD</span>. If BCH hasn't answered, set the affected phones aside and continue with the others.</p>
+  <p style="margin-top:10px;color:var(--muted);font-size:13.5px">If you're waiting on an answer from BCH, set the affected phones aside and continue with the others.</p>
 </section>
 
 <!-- ============================ BENCH CHECKLIST ============================ -->
@@ -538,50 +457,43 @@
   <p class="lede">Print one per phone (or per batch) and keep it with the device until it's packed.</p>
   <div class="row">
     <div class="fill">Serial number</div>
-    <div class="fill">Phone number</div>
-    <div class="fill">ICCID / EID</div>
-  </div>
-  <div class="row">
     <div class="fill">Technician</div>
-    <div class="fill">Date</div>
-    <div class="fill">Box #</div>
+    <div class="fill">Date / Box #</div>
   </div>
   <ul>
-    <li>Serial checked against order list</li>
     <li>Charged ≥ 50%</li>
-    <li>Label printed &amp; applied to phone back</li>
-    <li>SIM inserted / eSIM activated</li>
+    <li>Serial label applied to phone back</li>
     <li>English · United States</li>
     <li>Wi-Fi connected</li>
     <li>Remote Management — enrolled</li>
-    <li>No Apple Account signed in</li>
     <li>Location Services enabled</li>
-    <li>Hubb opened — permissions accepted</li>
-    <li>Hubb location = Always + Precise</li>
+    <li>Hub opened — prompts accepted</li>
+    <li>Hub location = Always + Precise</li>
     <li>All apps installed, none waiting</li>
+    <li>Locker opened — prompts accepted</li>
     <li>AutoFill → Locker on</li>
     <li>Locker → Live Activities on</li>
     <li>Cellular → Allow More Data on 5G</li>
     <li>App Store → Automatic Downloads on</li>
     <li>App Store → Cellular App Downloads = Always Allow</li>
-    <li>Rover opened — prompts allowed</li>
-    <li>Haiku opened — prompts allowed</li>
+    <li>Rover opened — prompts accepted</li>
+    <li>Haiku opened — prompts accepted</li>
     <li>Label serial = Settings serial</li>
     <li>BCH profile in VPN &amp; Device Mgmt</li>
-    <li>Cellular service + number recorded</li>
     <li>No damage</li>
     <li>Case on</li>
+    <li>Cable kept, retail box discarded</li>
     <li>Manifest row complete</li>
     <li>Packed — box # recorded</li>
   </ul>
 </section>
 
-<footer>Boston Children's Hospital · CMDI · iPhone Kitting Instructions v1.0 DRAFT</footer>
+<footer>Boston Children's Hospital · CMDI · iPhone Kitting Instructions v1.1 DRAFT</footer>
 </div>
 
 <script>
 (function(){
-  var KEY = 'bch-kitting-checks-v1';
+  var KEY = 'bch-kitting-checks-v2';
   var boxes = Array.prototype.slice.call(document.querySelectorAll('ol.steps input[type=checkbox]'));
   var saved = {};
   try { saved = JSON.parse(localStorage.getItem(KEY) || '{}') || {}; } catch (e) {}

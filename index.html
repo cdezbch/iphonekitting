@@ -97,9 +97,16 @@
   .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   @media (max-width:680px){ .two{grid-template-columns:1fr} nav.toc ul{columns:1} td:first-child{white-space:normal} }
 
-  .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
-  .toolbar button{font:inherit;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);background:#fff;cursor:pointer}
-  .toolbar button:hover{border-color:var(--brand);color:var(--brand)}
+  .toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 0 16px}
+  .toolbar button,.toolbar a{font:inherit;font-size:13px;padding:6px 12px;border-radius:8px;border:1px solid var(--line);
+    background:#fff;cursor:pointer;color:var(--ink);text-decoration:none;display:inline-block}
+  .toolbar button:hover,.toolbar a:hover{border-color:var(--brand);color:var(--brand)}
+
+  /* embedded in an iframe (Confluence, etc.) — drop the outer page chrome */
+  html.embed{background:#fff}
+  html.embed body{background:#fff}
+  html.embed .wrap{max-width:none;padding:10px 12px 28px}
+  html.embed header.doc{border-radius:0 0 12px 12px;margin-top:0}
 
   .bench{border:2px solid var(--ink)}
   .bench .row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin:0 0 12px}
@@ -143,6 +150,8 @@
 
 <div class="toolbar noprint">
   <button type="button" onclick="window.print()">Print / Save as PDF</button>
+  <a href="BCH-iPhone-Kitting-Guide.pdf" target="_blank" rel="noopener">Download PDF</a>
+  <a id="openFull" href="https://cdezbch.github.io/iphonekitting/" target="_blank" rel="noopener" hidden>Open in a new tab</a>
   <button type="button" id="resetChecks">Clear all checkboxes</button>
 </div>
 
@@ -475,6 +484,16 @@
 </div>
 
 <script>
+(function(){
+  // Embedded view: inside an iframe, or ?embed=1
+  var embedded = false;
+  try { embedded = (window.self !== window.top); } catch (e) { embedded = true; }
+  if (embedded || /[?&]embed=1/.test(location.search)) {
+    document.documentElement.classList.add('embed');
+    var full = document.getElementById('openFull');
+    if (full) full.hidden = false;
+  }
+})();
 (function(){
   var KEY = 'bch-kitting-checks-v2';
   var boxes = Array.prototype.slice.call(document.querySelectorAll('ol.steps input[type=checkbox]'));

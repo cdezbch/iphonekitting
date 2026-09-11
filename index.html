@@ -123,10 +123,11 @@
     body{background:#fff;font-size:11.5pt}
     .wrap{max-width:none;padding:0}
     .toolbar,.noprint{display:none!important}
-    section.card{border:1px solid #c9d1db;padding:14px 16px;margin-bottom:10px}
+    section.card{border:1px solid #c9d1db;padding:14px 16px;margin-bottom:10px;break-inside:avoid-page}
+    section.card.bench{break-before:page}
+    .two{break-inside:avoid}
     header.doc{-webkit-print-color-adjust:exact;print-color-adjust:exact}
     .tbd,.callout,.path b,.flow li::before,h2 .num,.rules li::before,th,tr.crit td,.draft{-webkit-print-color-adjust:exact;print-color-adjust:exact}
-    .pagebreak{break-before:page}
     h2,h3{break-after:avoid}
     a{color:inherit;text-decoration:none}
   }
